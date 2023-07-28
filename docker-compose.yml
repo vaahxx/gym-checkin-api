@@ -1,0 +1,12 @@
+# docker run --name gym-checkin-api-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=gymcheckinapi -p 5432:5432 bitnami/postgresql
+
+version: '3'
+services:
+  gym-checkin-api-pg:
+    image: bitnami/postgresql
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=gymcheckinapi
